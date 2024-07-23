@@ -1,0 +1,407 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+	background-image: url(b.jpg) 
+    background-color: #ffcad4;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar, footer, header {
+    text-align: center;
+}
+
+.navbar li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff69b4;
+    padding: 10px 20px;
+	display: inline;
+}
+
+/* Full-width large logo with slogan */
+.logo {
+    position: relative;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    background-color: #f0f0f0; /* Background color for the logo area */
+    overflow: hidden; /* Hide anything outside the logo container */
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.logo::after {
+    content: "Your Boutique Slogan Here"; /* Replace with actual slogan */
+    position: absolute;
+    bottom: 10px; /* Distance from bottom of the logo */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    font-size: 1.5em; /* Adjust font size */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Responsive design for the large logo */
+@media (max-width: 768px) {
+    .logo::after {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo::after {
+        font-size: 1em;
+        padding: 6px 12px;
+    }
+}
+
+/* Cropped small logo with slogan */
+.small-logo {
+    position: fixed; /* Fixed position on the screen */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    width: 60px; /* Set the width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensure it stays on top */
+    border: 2px solid #333; /* Optional border for emphasis */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Crop overflow */
+    background-color: #fff; /* Background color of the logo */
+}
+
+.small-logo img {
+    width: 100%; /* Fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.small-logo::after {
+    content: "Slogan"; /* Replace with actual slogan */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff; /* Text color */
+    font-size: 0.8em; /* Smaller font size */
+    text-align: center;
+    padding: 2px 5px;
+    border-radius: 3px; /* Rounded corners */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Responsive design for the small logo */
+@media (max-width: 768px) {
+    .small-logo {
+        width: 50px;
+    }
+
+    .small-logo::after {
+        font-size: 0.7em;
+        padding: 2px 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .small-logo {
+        width: 40px;
+    }
+
+    .small-logo::after {
+        font-size: 0.6em;
+        padding: 1px 3px;
+    }
+}
+
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 50px;
+}
+
+header  {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+header {
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+/* Container for the entire hero section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background: #fff; /* White background */
+  padding: 20px;
+}
+
+/* Content inside the hero section */
+.hero-content {
+  text-align: center;
+  color: #ff69b4; /* Pink color */
+  background: #ffe4e1; /* Peach background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  max-width: 600px; /* Maximum width for the content */
+  margin: 0 auto; /* Center the element horizontally */
+}
+
+.hero-content h1 {
+  font-size: 2.5rem; /* Large heading font size */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.hero-content p {
+  font-size: 1.25rem; /* Slightly larger text size for readability */
+  margin: 0; /* Remove default margin */
+}
+
+
+section {
+    padding: 20px;
+}
+
+.products, .about, .contact, .cart {
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer {
+    background-color: #ff69b4;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.products .product-item, .cart .cart-item {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+}
+
+.products .product-item img, .cart .cart-item img {
+    width: 100%;
+}
+
+
+.button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+
+.button:hover {
+      background-color: #0056b3;
+    }
+
+
+
+@media (max-width: 768px) {
+    .products .product-item, .cart .cart-item {
+        width: 100%;
+    }
+}
+
+.media-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.media-gallery .gallery-item {
+    margin: 15px;
+}
+
+.media-gallery img, .media-gallery video {
+    max-width: 100%;
+}
+
+.contact-details {
+    text-align: center;
+}
+
+.contact-details p, .contact-details a {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.contact-details a {
+    color: #ff69b4;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact form button {
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact form button:hover {
+    background: #ff4b4b;
+}
+
+/* Center Aligning the Content */
+header, .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar .nav-links, .contact, .products, .about, .cart {
+    justify-content: center !important;
+    margin: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+	margin-right: 20px;
+	display: inline;
+	 padding: 10px 20px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.product-item {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+.add-to-cart {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: white;
+    color: #ff69b4;
+    border: 2px solid #ff69b4;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+	color: #009ddc;
+}
+
+.social-icons a {
+    color: #009ddc;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff6b6b;
+}
